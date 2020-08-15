@@ -1,3 +1,9 @@
+*This fork replaced YouTube with Invidious*
+
+More info about Invidious: https://github.com/iv-org/invidious
+
+----
+
 A simple command line program to subscribe to youtube channels and
 view thumbnail links of videos in a locally generated html page. No
 youtube/google account needed.

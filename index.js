@@ -500,7 +500,7 @@ function process_one(channel_id_id, channel_id)
     {
         return download_page
         (
-            `https://www.youtube.com/feeds/videos.xml?channel_id=${channel_id}`
+            `https://www.invidio.us/feeds/videos.xml?channel_id=${channel_id}`
         );
     })
     .then((page) =>
@@ -971,9 +971,9 @@ document.addEventListener('DOMContentLoaded', function(e)
 			for (let i = 0; i < result[0].length; ++i) {
 				full += `
     <div class='card'>
-		<a href='https://www.youtube.com/embed/\
+		<a href='https://www.invidio.us/embed/\
 ${xss.inHTMLData(result[0][i].video_id)}?rel=0&autoplay=1'>
-			<img src='https://img.youtube.com/vi/\
+			<img src='https://img.invidio.us/vi/\
 ${xss.inHTMLData(result[0][i].video_id)}/mqdefault.jpg'>
         </a>
         <p title='Published ${
@@ -984,7 +984,7 @@ ${xss.inHTMLData(result[0][i].video_id)}/mqdefault.jpg'>
                 .fromNow()
             )}'>\
 ${xss.inHTMLData(validator.unescape(result[0][i].channel_name))}</p>
-        <a href='https://www.youtube.com/watch?v=\
+        <a href='https://www.invidio.us/watch?v=\
 ${xss.inHTMLData(result[0][i].video_id)}'>
             <h4 title='${xss.inHTMLData
                 (entities.encodeHTML
@@ -1007,7 +1007,7 @@ ${xss.inHTMLData(validator.unescape(result[0][i].video_title))}</h4>
 			result[1].forEach((elem) => {
 				full +=
 					`
-		   <li><a href='https://www.youtube.com/channel/\
+		   <li><a href='https://www.invidio.us/channel/\
 ${xss.inHTMLData(elem.channel_id)}'>\
 ${xss.inHTMLData(validator.unescape(elem.channel_name))}</a></li>`;
 			});
@@ -1345,11 +1345,11 @@ EXAMPLE Usages:
 
 > Subscribe to a youtube channel:
 
-vl "https://www.youtube.com/watch?v=EeNiqKNtpAA"
+vl "https://www.invidio.us/watch?v=EeNiqKNtpAA"
 
     or
 
-vl -s "https://www.youtube.com/watch?v=EeNiqKNtpAA"
+vl -s "https://www.invidio.us/watch?v=EeNiqKNtpAA"
 
 > Remove a subscription:
 
