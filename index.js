@@ -973,7 +973,7 @@ document.addEventListener('DOMContentLoaded', function(e)
     <div class='card'>
 		<a href='https://www.invidio.us/embed/\
 ${xss.inHTMLData(result[0][i].video_id)}?rel=0&autoplay=1'>
-			<img src='https://img.invidio.us/vi/\
+			<img src='https://invidio.us/vi/\
 ${xss.inHTMLData(result[0][i].video_id)}/mqdefault.jpg'>
         </a>
         <p title='Published ${
